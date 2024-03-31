@@ -1,3 +1,3 @@
 # glooboom
- Gloo Boom
-![Gloo](Data/GitGood/froggo.gif)"Space Chump!"
+![Gloo](_Assets/GitGood/froggo.gif)
+"Can you even dig it, Space Chump!" - Gloo, probably
