@@ -1,5 +1,5 @@
-title: (The Adventures of) GLOO BOOM
-author: 'Neo Te Aika - 22011265 - 289.106 Game Dev (2024)'
+### (The adventures of) GLOO BOOM
+## Neo Te Aika - 22011265 - 289.106 Game Dev (2024)
 ---
 ### PREMISE
 
