@@ -1,6 +1,5 @@
 ### (The adventures of) GLOO BOOM
 ## Neo Te Aika - 22011265 - 289.106 Game Dev (2024)
----
 ### PREMISE
 
 Out in dead-end space, working ship demolition to pay off tax debts, Gloo is armed with just the right amount of boom. *Twice.*  
