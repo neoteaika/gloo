@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Frog UV
-    second: {fileID: 2100000, guid: ad8c964d1b26954489895aee8ef97465, type: 2}
+    second: {fileID: 2100000, guid: 841a1bbfe89a00e48b4197459dd90419, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
