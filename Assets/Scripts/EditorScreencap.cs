@@ -1,12 +1,13 @@
 //  Neo Te Aika - taken from https://stackoverflow.com/questions/48663073/editor-window-screenshot
 //  Adds ability to screencap the scene window from Unity in edit-mode
-using System.IO;
+/*using System.IO;
 using UnityEditor;
 using UnityEditorInternal;
 using UnityEngine;
 
 public static class EditorScreenshotExtension
 {
+    #if UNITY_EDITOR
     [MenuItem("Screenshot/Take Screenshot %#k")]
     private static void Screenshot()
     {
@@ -43,4 +44,5 @@ public static class EditorScreenshotExtension
 
         Debug.Log("New Screenshot taken");
     }
-}
+    #endif
+}*/
