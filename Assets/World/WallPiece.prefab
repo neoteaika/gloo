@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8945540390260586364}
   - component: {fileID: 3305474889348501762}
+  - component: {fileID: 6736994144362757905}
+  - component: {fileID: -1911869837440712638}
   m_Layer: 0
   m_Name: WallPiece
   m_TagString: Untagged
@@ -40,12 +42,37 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4401405057885479512}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 364153c0b4578b0419e02b44c98a8bd6, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.1999998, y: 2.1999998, z: 0.18744642}
   m_Center: {x: 1, y: 1, z: 1.0695568}
+--- !u!114 &6736994144362757905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4401405057885479512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36c7bd6f90354a342bc29f189e62e9c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-1911869837440712638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4401405057885479512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7587646ae4d323f459b2383d4491ebc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 20
 --- !u!1 &9195793030134703427
 GameObject:
   m_ObjectHideFlags: 0
@@ -57,7 +84,6 @@ GameObject:
   - component: {fileID: 5062836744812617553}
   - component: {fileID: 963836587742792599}
   - component: {fileID: 5261449866720805345}
-  - component: {fileID: 676972736214926869}
   m_Layer: 0
   m_Name: Quad
   m_TagString: Untagged
@@ -130,17 +156,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &676972736214926869
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9195793030134703427}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}

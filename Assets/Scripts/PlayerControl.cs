@@ -8,12 +8,16 @@ public class PlayerControl : MonoBehaviour
     public Animator anim;
     private float horizontalInput;  // Store the hor/ver axis inputs to the player object
     private float verticalInput;
-    public float translateSpeed = 5f;  // Movement speed
+
     public bool useAbsoluteMotion;  // Move up when I say up, damnit!
+    public bool usePhysicalMotion;  //  PhysX ain't got jack!
+
+    public float translateSpeed = 5f;  // Movement speed
+    public float physicalSpeed = 60f;
     
     void Start()
     {
-        cam = Camera.main;
+
     }
 
     void Update()
@@ -26,15 +30,23 @@ public class PlayerControl : MonoBehaviour
         {
             // use absolute
             transform.Translate(horizontalInput, 0f, verticalInput, Space.World);
+        } else if (usePhysicalMotion)
+        {
+             // use forces
+            GetComponent<Rigidbody>().AddForce(horizontalInput * physicalSpeed, 0f, verticalInput * physicalSpeed);
         } else {
             // use relative
             transform.Translate(horizontalInput, 0f, verticalInput);
         }
         anim.SetFloat("vertical", Input.GetAxis("Vertical"));
-        Debug.Log(cam.ScreenToWorldPoint(Input.mousePosition)); //  Get screen>world space from camera
-        Vector3 mousePosition = cam.ScreenToWorldPoint(Input.mousePosition);
-        mousePosition.y = 0f;   //  Zero out Y value
-        transform.LookAt(mousePosition);
+        //Debug.Log(Camera.main.ScreenToWorldPoint(Input.mousePosition)); //  Get screen>world space from camera
+        //Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        //mousePosition.y = 0f;   //  Zero out Y value
+        //transform.LookAt(mousePosition);
+        //Vector3 newDir = Vector3.RotateTowards(transform.forward, targetDir, step, 0.0F);
+        //Debug.DrawRay(transform.position, newDir, Color.red);
+ 
+        //transform.rotation = Quaternion.LookRotation(newDir);
     }
 }
 
