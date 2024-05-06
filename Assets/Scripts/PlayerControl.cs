@@ -8,6 +8,8 @@ public class PlayerControl : MonoBehaviour
     public Animator anim;
     private float horizontalInput;  // Store the hor/ver axis inputs to the player object
     private float verticalInput;
+    private float moveDir;
+    private float lookDir;
 
     public bool useAbsoluteMotion;  // Move up when I say up, damnit!
     public bool usePhysicalMotion;  //  PhysX ain't got jack!
@@ -39,6 +41,11 @@ public class PlayerControl : MonoBehaviour
             transform.Translate(horizontalInput, 0f, verticalInput);
         }
         anim.SetFloat("vertical", Input.GetAxis("Vertical"));
+        anim.SetFloat("horizontal", Input.GetAxis("Horizontal"));
+        Vector3 moveDir = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")).normalized;
+        Vector3 lookDir = transform.position + moveDir;
+        transform.LookAt(lookDir);
+
         //Debug.Log(Camera.main.ScreenToWorldPoint(Input.mousePosition)); //  Get screen>world space from camera
         //Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         //mousePosition.y = 0f;   //  Zero out Y value
