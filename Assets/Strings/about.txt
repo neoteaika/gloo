@@ -1,0 +1,5 @@
+Test about text for Gloo
+
+This is a line without breaks
+
+Line with \n bre |n a /n ks
