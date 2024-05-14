@@ -1,0 +1,33 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="64" height="64" viewBox="0 0 64 64"
+     xmlns="http://www.w3.org/2000/svg" version="1.1">
+<desc>objects.blend, (Blender 4.2.0 Alpha)</desc>
+<polygon stroke="black" stroke-width="1" fill="rgb(204, 204, 204)" fill-opacity="0.25" points="64.013,37.420 52.005,37.420 39.996,37.420 39.996,40.348 64.013,40.348 " />
+<polygon stroke="black" stroke-width="1" fill="rgb(204, 204, 204)" fill-opacity="0.25" points="64.013,25.289 39.996,25.289 39.996,28.217 64.013,28.217 " />
+<polygon stroke="black" stroke-width="1" fill="rgb(31, 255, 29)" fill-opacity="0.25" points="61.625,51.222 61.625,46.226 42.384,46.226 42.384,51.222 " />
+<polygon stroke="black" stroke-width="1" fill="rgb(13, 111, 204)" fill-opacity="0.25" points="61.625,60.696 61.625,51.222 42.384,51.222 42.384,60.696 " />
+<polygon stroke="black" stroke-width="1" fill="rgb(35, 35, 35)" fill-opacity="0.25" points="61.625,51.222 61.625,60.696 64.013,64.000 64.013,52.174 " />
+<polygon stroke="black" stroke-width="1" fill="rgb(35, 35, 35)" fill-opacity="0.25" points="58.599,34.283 64.013,31.146 52.064,31.146 " />
+<polygon stroke="black" stroke-width="1" fill="rgb(35, 35, 35)" fill-opacity="0.25" points="61.625,60.696 42.384,60.696 39.996,64.000 64.013,64.000 " />
+<polygon stroke="black" stroke-width="1" fill="rgb(35, 35, 35)" fill-opacity="0.25" points="48.000,37.000 40.000,32.000 40.000,37.000 " />
+<polygon stroke="black" stroke-width="1" fill="rgb(35, 35, 35)" fill-opacity="0.25" points="42.384,60.696 42.384,51.222 39.996,52.116 39.996,64.000 " />
+<polygon stroke="black" stroke-width="1" fill="rgb(35, 35, 35)" fill-opacity="0.25" points="42.384,46.226 61.625,46.226 64.013,40.348 39.996,40.348 " />
+<polygon stroke="black" stroke-width="1" fill="rgb(35, 35, 35)" fill-opacity="0.25" points="64.013,37.420 58.599,34.283 52.005,37.420 " />
+<polygon stroke="black" stroke-width="1" fill="rgb(35, 35, 35)" fill-opacity="0.25" points="48.000,32.000 40.000,32.000 48.000,37.000 " />
+<polygon stroke="black" stroke-width="1" fill="rgb(204, 204, 204)" fill-opacity="0.25" points="64.013,22.361 39.996,22.361 39.996,25.289 64.013,25.289 " />
+<polygon stroke="black" stroke-width="1" fill="rgb(204, 204, 204)" fill-opacity="0.25" points="64.013,28.217 39.996,28.218 39.996,31.146 52.064,31.146 64.013,31.146 " />
+<polygon stroke="black" stroke-width="1" fill="rgb(204, 204, 204)" fill-opacity="0.25" points="29.919,0.000 28.132,4.555 32.246,2.291 " />
+<polygon stroke="black" stroke-width="1" fill="rgb(204, 204, 204)" fill-opacity="0.25" points="29.919,31.754 32.246,29.463 28.132,28.207 " />
+<polygon stroke="black" stroke-width="1" fill="rgb(204, 204, 204)" fill-opacity="0.25" points="0.000,2.291 4.114,4.555 2.327,0.000 " />
+<polygon stroke="black" stroke-width="1" fill="rgb(204, 204, 204)" fill-opacity="0.25" points="4.114,28.207 0.000,29.463 2.327,31.754 " />
+<polygon stroke="black" stroke-width="1" fill="rgb(204, 204, 204)" fill-opacity="0.25" points="28.132,4.555 28.132,28.207 32.246,29.463 32.246,2.291 " />
+<polygon stroke="black" stroke-width="1" fill="rgb(204, 204, 204)" fill-opacity="0.25" points="4.114,4.555 28.132,4.555 29.919,0.000 2.327,0.000 " />
+<polygon stroke="black" stroke-width="1" fill="rgb(204, 204, 204)" fill-opacity="0.25" points="28.132,28.207 4.114,28.207 2.327,31.754 29.919,31.754 " />
+<polygon stroke="black" stroke-width="1" fill="rgb(204, 204, 204)" fill-opacity="0.25" points="4.114,28.207 4.114,4.555 0.000,2.291 0.000,29.463 " />
+<polygon stroke="black" stroke-width="1" fill="rgb(204, 204, 204)" fill-opacity="0.25" points="2.327,31.754 0.000,34.081 0.000,61.673 2.327,64.000 " />
+<polygon stroke="black" stroke-width="1" fill="rgb(204, 204, 204)" fill-opacity="0.25" points="32.246,34.081 29.919,31.754 29.919,64.000 32.246,61.673 " />
+<polygon stroke="black" stroke-width="1" fill="rgb(204, 204, 204)" fill-opacity="0.25" points="29.919,31.754 2.327,31.754 2.327,64.000 29.919,64.000 " />
+
+</svg>
