@@ -22,15 +22,15 @@ public class PlayerBullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if(other.gameObject.TryGetComponent(out Health health))
+        if(other.transform.root.gameObject.TryGetComponent(out Health health))
         {
-            audioSource.PlayOneShot(blam, 0.7F);
+            //audioSource.PlayOneShot(blam, 0.7F);
             health.Damage(damage);
             Destroy(gameObject);
         }
         if(other.relativeVelocity.magnitude > 5)
         {
-           audioSource.PlayOneShot(ricochet, 0.7F);
+           //audioSource.PlayOneShot(ricochet, 0.7F);
         }
     }
 }
