@@ -5,6 +5,7 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     public int health = 20;
+    public int healthReset = 20;
 
     public void Damage(int damage)
     {
@@ -14,5 +15,10 @@ public class Health : MonoBehaviour
         {
             Debug.Log("DETH!");
         }
+    }
+
+    public void RecoverFull()
+    {
+        health += healthReset;
     }
 }
