@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,14 +6,15 @@ using UnityEngine;
 //  CONTROLLER V2 - This is based on using Unity's AnimatorController to animate Gloo as we move around
 public class PlayerControl : MonoBehaviour
 {
-    public Animator anim;
+    public static bool playerControlFocus = true;
+    public Animator anim;   //  For anims
     private float horizontalInput;  // Store the hor/ver axis inputs to the player object
     private float verticalInput;
     private float moveDir;
     private float lookDir;
 
     public bool useAbsoluteMotion;  // Move up when I say up, damnit!
-    public bool usePhysicalMotion;  //  PhysX ain't got jack!
+    //public bool usePhysicalMotion;  //  PhysX ain't got jack!
 
     public float translateSpeed = 5f;  // Movement speed
     public float physicalSpeed = 60f;
@@ -24,6 +26,7 @@ public class PlayerControl : MonoBehaviour
 
     void Update()
     {
+        if (!playerControlFocus) {return;}  //  Early break/prevent input response (Dialog, cinematics, modals)
         horizontalInput = Input.GetAxis("Horizontal") * Time.deltaTime * translateSpeed;
         verticalInput = Input.GetAxis("Vertical") * Time.deltaTime * translateSpeed;
         //Debug.Log(horizontalInput); //  Just to make sure we are actually getting the inputs
@@ -32,10 +35,10 @@ public class PlayerControl : MonoBehaviour
         {
             // use absolute
             transform.Translate(horizontalInput, 0f, verticalInput, Space.World);
-        } else if (usePhysicalMotion)
+        /*} else if (usePhysicalMotion)
         {
              // use forces
-            GetComponent<Rigidbody>().AddForce(horizontalInput * physicalSpeed, 0f, verticalInput * physicalSpeed);
+            GetComponent<Rigidbody>().AddForce(horizontalInput * physicalSpeed, 0f, verticalInput * physicalSpeed);*/
         } else {
             // use relative
             transform.Translate(horizontalInput, 0f, verticalInput);

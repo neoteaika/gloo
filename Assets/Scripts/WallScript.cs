@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WallScript : MonoBehaviour
 {
+    public Material[] wall_Material;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,7 @@ public class WallScript : MonoBehaviour
         {
             Destroy(bullet.gameObject);
             GetComponentInChildren<Renderer>().material.color = Color.red;
+            //GetComponentInChildren<Renderer>().material   //  TODO - change material according to health
         }
     }
 }

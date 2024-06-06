@@ -60,6 +60,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36c7bd6f90354a342bc29f189e62e9c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wall_Material:
+  - {fileID: 2100000, guid: eafe7bdd2a0435d478d3316bb7e3c202, type: 2}
+  - {fileID: 2100000, guid: 0549267b64374564bbfd41a25c0bad3d, type: 2}
+  - {fileID: 2100000, guid: 5697566164f3caf4dada2869e02ce414, type: 2}
+  - {fileID: 2100000, guid: 84b3a1735510a974aa454c43427849fe, type: 2}
+  - {fileID: 2100000, guid: 2a8e72a0a994ed3439f6398cbf07706c, type: 2}
 --- !u!114 &-1911869837440712638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73,6 +79,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 20
+  healthReset: 20
 --- !u!1 &9195793030134703427
 GameObject:
   m_ObjectHideFlags: 0
