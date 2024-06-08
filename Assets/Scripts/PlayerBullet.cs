@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerBullet : MonoBehaviour
 {
     private AudioSource audioSource;
+    public GameObject explosionTest;
     public AudioClip ricochet;
     public AudioClip blam;
     public Rigidbody rbody;
@@ -17,7 +18,14 @@ public class PlayerBullet : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         rbody = GetComponent<Rigidbody>();
         rbody.AddRelativeForce(Vector3.forward * speed, ForceMode.Impulse);
+        StartCoroutine(Ignite());
         Destroy(gameObject, lifespan);
+    }
+
+    IEnumerator Ignite()
+    {
+        yield return new WaitForSeconds(lifespan);
+        Instantiate(explosionTest, transform.position, transform.rotation);
     }
 
     private void OnCollisionEnter(Collision other)
