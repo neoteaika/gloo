@@ -8,22 +8,10 @@ public class PlayerControl : MonoBehaviour
 {
     public static bool playerControlFocus = true;
     public Animator anim;   //  For anims
-    private float horizontalInput;  // Store the hor/ver axis inputs to the player object
-    private float verticalInput;
-    private float moveDir;
-    private float lookDir;
-
-    public bool useAbsoluteMotion;  // Move up when I say up, damnit!
-    //public bool usePhysicalMotion;  //  PhysX ain't got jack!
-
-    public float translateSpeed = 5f;  // Movement speed
-    public float physicalSpeed = 60f;
+    private float horizontalInput, verticalInput, lookDir, moveDir;  // Store the hor/ver axis inputs to the player object
+    public bool useAbsoluteMotion, usePhysicalMotion;  // Move up when I say up, damnit! PhysX ain't got jack.
+    public float translateSpeed = 5f, physicalSpeed = 60f;  // Movement speed
     
-    void Start()
-    {
-
-    }
-
     void Update()
     {
         //  ++  CHECKSAHEAD ++  ??
@@ -48,14 +36,5 @@ public class PlayerControl : MonoBehaviour
         Vector3 moveDir = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")).normalized;
         Vector3 lookDir = transform.position + moveDir;
         transform.LookAt(lookDir);
-
-        //Debug.Log(Camera.main.ScreenToWorldPoint(Input.mousePosition)); //  Get screen>world space from camera
-        //Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        //mousePosition.y = 0f;   //  Zero out Y value
-        //transform.LookAt(mousePosition);
-        //Vector3 newDir = Vector3.RotateTowards(transform.forward, targetDir, step, 0.0F);
-        //Debug.DrawRay(transform.position, newDir, Color.red);
- 
-        //transform.rotation = Quaternion.LookRotation(newDir);
     }
 }

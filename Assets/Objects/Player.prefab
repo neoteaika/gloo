@@ -280,7 +280,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 6248856128441153340}
   useAbsoluteMotion: 0
-  usePhysicalMotion: 0
   translateSpeed: 5
   physicalSpeed: 60
 --- !u!54 &8736827842293707294
@@ -557,6 +556,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 8f0e48e0226d2644ea262ebd4abd0e82, type: 3}
       propertyPath: m_Name
       value: gloo
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8f0e48e0226d2644ea262ebd4abd0e82, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 8f0e48e0226d2644ea262ebd4abd0e82, type: 3}
       propertyPath: m_Controller

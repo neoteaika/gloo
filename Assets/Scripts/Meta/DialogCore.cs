@@ -7,8 +7,7 @@ public class DialogCore : MonoBehaviour
 {
     public GameObject Player;
     // Start is called before the first frame update
-    public static bool DialogActive;
-    public static bool DialogFocus;
+    public static bool DialogActive, DialogFocus;
     void Start()
     {
         

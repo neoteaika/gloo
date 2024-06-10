@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 1618101784829580975}
   - component: {fileID: 1618101784829580969}
   - component: {fileID: -6104152161528393527}
+  - component: {fileID: -2969257299426871983}
+  - component: {fileID: 1409434751776110936}
   m_Layer: 0
   m_Name: HUDPrimer
   m_TagString: EditorOnly
@@ -156,3 +158,39 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-2969257299426871983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618101784829580972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 019b2e0620310354c8a8fc5510981091, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerLives: 3
+  playerScore: 0
+  playerDisks: 0
+  playerSecrets: 0
+  playerCards: 0
+  playerBombs: 40
+  totalLevelSeconds: 20
+  currentLevelSeconds: 0
+  TextScore: {fileID: 0}
+  TextTimer: {fileID: 0}
+  playerProgression: 0
+--- !u!114 &1409434751776110936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618101784829580972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81f6b2f484bfaa443b8a39b902133bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 4108316006646828184, guid: e2ce1360a3af3324394c8c543d1cb2a8, type: 3}

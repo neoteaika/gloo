@@ -5,23 +5,11 @@ using UnityEngine;
 public class canvas_mainmenu : MonoBehaviour
 {
     // Top Level Items
-    public GameObject MenuMain; //  Spinning Gloo intro thingy, from here you can play, quit or view the credits
-    public GameObject MenuPlay;
-    public GameObject MenuExit;
-    public GameObject MenuAbout;
-
+    public GameObject MenuMain, MenuPlay, MenuExit, MenuAbout; //  Spinning Gloo intro thingy, from here you can play, quit or view the credits.
     // Play Menu Items
-    public GameObject MenuLevels;
-    public GameObject MenuCostumes;
-    public GameObject MenuMuseum;
-    public GameObject MenuSetup;
-    public GameObject MenuHelp;
-
+    public GameObject MenuLevels, MenuCostumes, MenuMuseum, MenuSetup, MenuHelp;
     // Setup Menu Items
-    //public GameObject AudioSFX;
-    //public GameObject AudioMusic;
-    //public GameObject DisplayFullscreen;
-    //public GameObject GoBack_Setup;
+    //public GameObject AudioSFX, AudioMusic, DisplayFullscreen, GoBack_Setup;
 
     void Start()
     {

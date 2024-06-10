@@ -19,12 +19,12 @@ public class WallScript : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        Debug.Log("DENT");
+        /*Debug.Log("DENT");
         if(other.gameObject.TryGetComponent(out PlayerBullet bullet))
         {
             Destroy(bullet.gameObject);
             GetComponentInChildren<Renderer>().material.color = Color.red;
             //GetComponentInChildren<Renderer>().material   //  TODO - change material according to health
-        }
+        }*/
     }
 }

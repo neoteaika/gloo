@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    public int health = 20;
-    public int healthReset = 20;
+    public int health = 20, healthReset = 20;
 
     public void Damage(int damage)
     {
