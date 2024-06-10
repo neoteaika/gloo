@@ -61,7 +61,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25a031cac6f8b842b0852da7ffda9e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionTest: {fileID: 6973221843770880604, guid: 2ccea7b4657584b448c6f4ed62b5966d, type: 3}
+  explosionTest: {fileID: 4469268502998592735, guid: 8ea49559fec350447a40a82f3f024015, type: 3}
   ricochet: {fileID: 8300000, guid: e98474839e1101144a729381338f0bb0, type: 3}
   blam: {fileID: 8300000, guid: f6433efab8860bf4f95a82df05ebbad0, type: 3}
   rbody: {fileID: 0}

@@ -15,8 +15,8 @@ public class GameCore : MonoBehaviour
     public int playerBombs = 0; //  How many BOMBS does the player have?
     public float totalLevelSeconds = 20f;
     public float currentLevelSeconds;
-    public TextMeshProUGUI TextScore;
-    public TextMeshProUGUI TextTimer;
+    //public TextMeshProUGUI TextScore;
+    //public TextMeshProUGUI TextTimer;
 
     public int playerProgression = 0;  //  What is the FURTHEST level the player has reached? (Maybe unlock levels in the menu)
 
@@ -45,6 +45,6 @@ public class GameCore : MonoBehaviour
         {
             Debug.Log("Time out!");
         }
-        TextScore.text = playerScore.ToString();
+        //TextScore.text = playerScore.ToString();
     }
 }

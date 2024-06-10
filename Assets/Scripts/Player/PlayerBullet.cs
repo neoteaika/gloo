@@ -18,13 +18,15 @@ public class PlayerBullet : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         rbody = GetComponent<Rigidbody>();
         rbody.AddRelativeForce(Vector3.forward * speed, ForceMode.Impulse);
-        StartCoroutine(Ignite());
+        //StartCoroutine(Ignite());
+        //Invoke("Instantiate(explosionTest, transform.position, transform.rotation);")
+        //StartCoroutine(Ignite());
         Destroy(gameObject, lifespan);
     }
 
     IEnumerator Ignite()
     {
-        yield return new WaitForSeconds(lifespan);
+        yield return new WaitForSeconds(lifespan-1f);
         Instantiate(explosionTest, transform.position, transform.rotation);
     }
 
@@ -34,11 +36,13 @@ public class PlayerBullet : MonoBehaviour
         {
             //audioSource.PlayOneShot(blam, 0.7F);
             health.Damage(damage);
+            Instantiate(explosionTest, transform.position, transform.rotation);
             Destroy(gameObject);
         }
         if(other.relativeVelocity.magnitude > 5)
         {
            //audioSource.PlayOneShot(ricochet, 0.7F);
+           Instantiate(explosionTest, transform.position, transform.rotation);
         }
     }
 }
