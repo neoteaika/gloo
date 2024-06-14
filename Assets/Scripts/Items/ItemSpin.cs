@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ItemSpin : MonoBehaviour
 {
+    private AudioSource audioSource;
     public float spinTime = 0.8f;
     void Update()
     {

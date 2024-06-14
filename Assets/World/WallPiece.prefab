@@ -60,12 +60,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36c7bd6f90354a342bc29f189e62e9c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wall_Material:
+  wallGrade: 5
+  wallStrength: 3
+  wallStrengthInt: 3
+  matnum: 0
+  wallMat:
   - {fileID: 2100000, guid: eafe7bdd2a0435d478d3316bb7e3c202, type: 2}
   - {fileID: 2100000, guid: 0549267b64374564bbfd41a25c0bad3d, type: 2}
   - {fileID: 2100000, guid: 5697566164f3caf4dada2869e02ce414, type: 2}
   - {fileID: 2100000, guid: 84b3a1735510a974aa454c43427849fe, type: 2}
   - {fileID: 2100000, guid: 2a8e72a0a994ed3439f6398cbf07706c, type: 2}
+  fxWallShatter: {fileID: 3925942371998717150, guid: ed7f0278932219749bbd4dc6f190956b, type: 3}
+  sfxWallShatter: {fileID: 0}
 --- !u!114 &-1911869837440712638
 MonoBehaviour:
   m_ObjectHideFlags: 0

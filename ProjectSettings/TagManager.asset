@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Interactable
+  - ActionZone
+  - AudioBrain
+  - GameBrain
+  - MusicBrain
   layers:
   - Default
   - TransparentFX
@@ -12,7 +17,7 @@ TagManager:
   - Water
   - UI
   - WorldGeo
-  - 
+  - PlayerInteract
   - Player
   - PlayerBullet
   - Enemy

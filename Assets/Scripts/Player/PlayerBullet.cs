@@ -1,31 +1,34 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using System.Collections; using System.Collections.Generic; using UnityEngine;
 
 public class PlayerBullet : MonoBehaviour
 {
+    public AudioCore audioCore; private AudioSource audioSource; public float volSFX = 1;    //fuck this shit pt.1
     private bool debugLog = true;
-    private AudioSource audioSource;
-    public GameObject explosionTest;
-    public AudioClip blamn, ricochet;
+    public GameObject fxExplosion;
     public Rigidbody rbody;
-    public float speed = 12f, lifespan = 2f;
-    public int damage = 14;
+    public float speed = 12f, lifespan = 2f; public int damage = 14;
+    void Start()
+    {
+        audioSource = this.GetComponent<AudioSource>();
+        audioCore = GameObject.FindGameObjectWithTag("AudioBrain").GetComponent<AudioCore>(); //fuck this shit pt.2
+    }
     void Awake()
     {
-        audioSource = GetComponent<AudioSource>();
         rbody = GetComponent<Rigidbody>();
         rbody.AddRelativeForce(Vector3.forward * speed, ForceMode.Impulse);
         Destroy(gameObject, lifespan);
     }
     IEnumerator Combust()
     {
-        Instantiate(explosionTest, transform.position, transform.rotation);
+        Instantiate(fxExplosion, transform.position, transform.rotation);
+        //RaycastHit
         Destroy(gameObject);
         yield return null;
     }
-    //  bounce and collision scripting
-    private int bounce = 0, bounceGrace = 2, bounceMax = 3;
+    ///
+    /// +++ BOUNCE AND COLLISION LOGIC +++ ///
+    ///
+    [SerializeField] private int bounce = 0, bounceGrace = 2, bounceMax = 3;
     private void OnCollisionEnter(Collision other)
     {
         if(other.gameObject.layer == 6)
@@ -34,6 +37,7 @@ public class PlayerBullet : MonoBehaviour
             {
                 bounce += 1;
                 if(debugLog) Debug.Log("Has bounced: " + bounce + " times");
+                audioCore.audioSource.PlayOneShot(audioCore.sfxBombBounce, volSFX); //fuck this shit pt.3
             }
             if(bounce > bounceMax)
             {
@@ -51,17 +55,10 @@ public class PlayerBullet : MonoBehaviour
             }
             else StartCoroutine(Combust());
         }
-        /*if(other.transform.root.gameObject.TryGetComponent(out Health health))
+        if(other.gameObject.layer == 10)
         {
-            //audioSource.PlayOneShot(blam, 0.7F);
-            health.Damage(damage);
-            Instantiate(explosionTest, transform.position, transform.rotation);
-            Destroy(gameObject);
+            StartCoroutine(Combust());
         }
-        if(other.relativeVelocity.magnitude > 5)
-        {
-           //audioSource.PlayOneShot(ricochet, 0.7F);
-           Instantiate(explosionTest, transform.position, transform.rotation);
-        }*/
+        //health.Damage(damage);
     }
 }

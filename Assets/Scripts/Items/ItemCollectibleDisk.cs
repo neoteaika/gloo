@@ -4,22 +4,13 @@ using UnityEngine;
 
 public class ItemCollectibleDisk : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject fxCollection;
+    private void OnTriggerEnter(Collider other)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    private void OnCollisionEnter(Collision other)
-    {
-        if(other.gameObject.CompareTag("Player"))
+        if(other.gameObject.CompareTag("Player") || other.gameObject.layer == 8)
         {
             //playerDisks += 1;
+            Instantiate(fxCollection, transform.position, transform.rotation);
             Destroy(gameObject);
         }
     }

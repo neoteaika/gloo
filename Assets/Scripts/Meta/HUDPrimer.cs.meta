@@ -3,7 +3,8 @@ guid: e78c24bde6e9f8d46b960065b219c2db
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - HUDPrefab: {fileID: 7172780732666468470, guid: 5aa7a2656966ce04e9a589d32a853acf, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -9,8 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8121101125269477069}
-  - component: {fileID: 7039178577154133956}
   - component: {fileID: 2776322763204303527}
+  - component: {fileID: 2129420923}
+  - component: {fileID: 2129420924}
+  - component: {fileID: 7039178577154133956}
   m_Layer: 0
   m_Name: Disk
   m_TagString: Untagged
@@ -34,6 +36,45 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2776322763204303527
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1210529169994516027}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.62, y: 0.65, z: 0.19}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2129420923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1210529169994516027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 004a70c87f998be4e9886397ecad879b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spinTime: 0.4
+--- !u!114 &2129420924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1210529169994516027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f7803ae9346acf42b32ee1e866ff4e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fxCollection: {fileID: 454123770501903051, guid: 158728fcfd3793541b77465a7761ac48, type: 3}
 --- !u!82 &7039178577154133956
 AudioSource:
   m_ObjectHideFlags: 0
@@ -55,7 +96,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 15
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -130,19 +171,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!65 &2776322763204303527
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1210529169994516027}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5, z: 0.1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &5001329397767762327
 PrefabInstance:
   m_ObjectHideFlags: 0

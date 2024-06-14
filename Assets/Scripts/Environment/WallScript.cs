@@ -4,27 +4,39 @@ using UnityEngine;
 
 public class WallScript : MonoBehaviour
 {
-    public Material[] wall_Material;
-    // Start is called before the first frame update
+    public int wallGrade = 5, wallStrength = 3, wallStrengthInt = 3, matnum;
+    //  At 0 Strength, reset to Int and lower Grade by 1.
+    //  On creation or Grade changes, reset Strength to (x)
+    public Material[] wallMat; private Renderer surface;    //  the cool shit
+    public GameObject fxWallShatter; //  the really cool shit
     void Start()
     {
-        
+        //wallStrength = wallStrengthInt;   //  this was working 3 hours ago
+        surface = this.GetComponentInChildren<Renderer>();
+        surface.material = new Material(wallMat[matnum]);
+        //fxCore = GameObject.FindGameObjectWithTag("GameBrain");.GetComponent<FxCore>();   //  this shit don't work yo
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void OnCollisionEnter(Collision other)
     {
-        /*Debug.Log("DENT");
-        if(other.gameObject.TryGetComponent(out PlayerBullet bullet))
+        if (wallGrade < 6) //if (matnum < 4) //wallGrade > 0 && 
         {
-            Destroy(bullet.gameObject);
-            GetComponentInChildren<Renderer>().material.color = Color.red;
-            //GetComponentInChildren<Renderer>().material   //  TODO - change material according to health
-        }*/
+            wallStrength --;
+            if (matnum < 4)
+            {
+                matnum ++; 
+            }
+        }
+        if (wallStrength <= 0)
+        {
+            wallGrade --;
+            wallStrength = wallStrengthInt;
+        }   
+        if (wallGrade <= 1 || matnum > 3)
+        {
+            Instantiate(fxWallShatter, transform.position, transform.rotation);
+            //Instantiate(fxCore.fxWallShatter, transform.position, transform.rotation);    //  FUCK i'll have to come back to this
+            Destroy(this.gameObject);   
+        }
+        surface.material = new Material(wallMat[matnum]); 
     }
 }

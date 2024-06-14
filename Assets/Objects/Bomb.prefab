@@ -61,13 +61,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25a031cac6f8b842b0852da7ffda9e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionTest: {fileID: 4469268502998592735, guid: 8ea49559fec350447a40a82f3f024015, type: 3}
-  ricochet: {fileID: 8300000, guid: e98474839e1101144a729381338f0bb0, type: 3}
-  blam: {fileID: 8300000, guid: f6433efab8860bf4f95a82df05ebbad0, type: 3}
+  fxExplosion: {fileID: 4469268502998592735, guid: 8ea49559fec350447a40a82f3f024015, type: 3}
   rbody: {fileID: 0}
+  audioCore: {fileID: 0}
   speed: 12
   lifespan: 10
   damage: 1
+  bounce: 0
+  bounceGrace: 2
+  bounceMax: 3
 --- !u!54 &6372528452566270497
 Rigidbody:
   m_ObjectHideFlags: 0

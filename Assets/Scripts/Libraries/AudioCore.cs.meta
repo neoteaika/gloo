@@ -1,0 +1,38 @@
+fileFormatVersion: 2
+guid: 16e69d22f2c6e37458efd63a0a9497c9
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - audioSource: {instanceID: 0}
+  - sfxTest0: {fileID: 8300000, guid: 370563e392af7d5459cd805e07d6faee, type: 3}
+  - sfxTest1: {fileID: 8300000, guid: 370563e392af7d5459cd805e07d6faee, type: 3}
+  - sfxObjExplosion: {instanceID: 0}
+  - sfxBombBounce: {fileID: 8300000, guid: 176ef81cbf04c1e4b943e3164d0ad90f, type: 3}
+  - sfxUIAccept: {fileID: 8300000, guid: d19bd0f861e6bcf439239d57966a3d55, type: 3}
+  - sfxUIBack: {fileID: 8300000, guid: 3c9eca1ca18019a449aa8b87f1b63e08, type: 3}
+  - sfxUISelect: {fileID: 8300000, guid: 17b3bc4e087ab874cbd4592c4ba7afd3, type: 3}
+  - sfxUISwipe: {fileID: 8300000, guid: 370563e392af7d5459cd805e07d6faee, type: 3}
+  - sfxEnemyAlert: {fileID: 8300000, guid: 370563e392af7d5459cd805e07d6faee, type: 3}
+  - sfxEnemyHurt: {fileID: 8300000, guid: 594fae287a6f7d54aa4f8b6255674434, type: 3}
+  - sfxEnemyDeath: {fileID: 8300000, guid: 908284527ce5c5641b72531b0443aa88, type: 3}
+  - sfxHoloDismiss: {fileID: 8300000, guid: f5ef511dd1b09c34689302e69584b4a1, type: 3}
+  - sfxHoloAct: {fileID: 8300000, guid: 81059186ab233e7478320585b7322193, type: 3}
+  - sfxVendoAmb: {fileID: 8300000, guid: cfda050b43fcf414ebf9a1c85d9b6ec5, type: 3}
+  - sfxVendoAct: {fileID: 8300000, guid: c66f6ea9fad2548479b93f341c9ccb98, type: 3}
+  - sfxLvlPadSpawn: {fileID: 8300000, guid: 370563e392af7d5459cd805e07d6faee, type: 3}
+  - sfxLvlPadCheck: {fileID: 8300000, guid: 370563e392af7d5459cd805e07d6faee, type: 3}
+  - sfxLvlPad0: {fileID: 8300000, guid: 370563e392af7d5459cd805e07d6faee, type: 3}
+  - sfxLvlPad1: {fileID: 8300000, guid: afcd1fd40fcb4e64290f5b0d84f63dd9, type: 3}
+  - sfxLvlSwitch0: {fileID: 8300000, guid: 370563e392af7d5459cd805e07d6faee, type: 3}
+  - sfxLvlSwitch1: {fileID: 8300000, guid: 1caaddb58dd76fa49af85dec24e3fe43, type: 3}
+  - sfxDoor0: {fileID: 8300000, guid: c70723e7bef524d42b0ddc9dd0347bc1, type: 3}
+  - sfxDoor1: {fileID: 8300000, guid: b56738af6dcdd674fa7e66e17f921e36, type: 3}
+  - sfxAmbSpace: {instanceID: 0}
+  - sfxAmbComputers: {instanceID: 0}
+  - sfxAmbMars: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

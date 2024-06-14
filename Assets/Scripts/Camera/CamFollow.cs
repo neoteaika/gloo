@@ -6,6 +6,7 @@ public class CamFollow : MonoBehaviour
 {
     public Transform player;
     public float smoothing = 0.2f;
+    public bool followEnabled = true;
 
     private Vector3 offset;
     private Vector3 velocity = Vector3.zero;
@@ -19,7 +20,11 @@ public class CamFollow : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
+        if (followEnabled)
+        {
         Vector3 targetPosition = player.position + offset;
         transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothing);
+        transform.LookAt(player);
+        }
     }
 }

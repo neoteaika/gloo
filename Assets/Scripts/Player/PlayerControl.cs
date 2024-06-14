@@ -8,9 +8,9 @@ public class PlayerControl : MonoBehaviour
 {
     public static bool playerControlFocus = true;
     public Animator anim;   //  For anims
-    private float horizontalInput, verticalInput, lookDir, moveDir;  // Store the hor/ver axis inputs to the player object
-    public bool useAbsoluteMotion, usePhysicalMotion;  // Move up when I say up, damnit! PhysX ain't got jack.
-    public float translateSpeed = 5f, physicalSpeed = 60f;  // Movement speed
+    private float horizontalInput, verticalInput,
+    lookDir, moveDir, translateSpeed = 5f;  // Store the hor/ver axis inputs & move speeds
+    public bool useAbsoluteMotion;  // Move up when I say up, damnit! PhysX ain't got jack.
     
     void Update()
     {
