@@ -9,7 +9,6 @@ public class ItemCollectibleDisk : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player") || other.gameObject.layer == 8)
         {
-            //playerDisks += 1;
             Instantiate(fxCollection, transform.position, transform.rotation);
             Destroy(gameObject);
         }

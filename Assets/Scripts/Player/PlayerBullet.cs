@@ -3,10 +3,10 @@ using System.Collections; using System.Collections.Generic; using UnityEngine;
 public class PlayerBullet : MonoBehaviour
 {
     public AudioCore audioCore; private AudioSource audioSource; public float volSFX = 1;    //fuck this shit pt.1
-    private bool debugLog = true;
+    private bool debugLog = false;
     public GameObject fxExplosion;
     public Rigidbody rbody;
-    public float speed = 12f, lifespan = 2f; public int damage = 14;
+    public float speed = 12f, lifespan = 2f; public int damage = 1;
     void Start()
     {
         audioSource = this.GetComponent<AudioSource>();
@@ -21,7 +21,7 @@ public class PlayerBullet : MonoBehaviour
     IEnumerator Combust()
     {
         Instantiate(fxExplosion, transform.position, transform.rotation);
-        //RaycastHit
+        
         Destroy(gameObject);
         yield return null;
     }
@@ -31,6 +31,11 @@ public class PlayerBullet : MonoBehaviour
     [SerializeField] private int bounce = 0, bounceGrace = 2, bounceMax = 3;
     private void OnCollisionEnter(Collision other)
     {
+        if(other.gameObject.layer == 10)
+        {
+            StartCoroutine(Combust());
+            return;
+        }
         if(other.gameObject.layer == 6)
         {
             if(bounce <= bounceMax)
@@ -55,10 +60,5 @@ public class PlayerBullet : MonoBehaviour
             }
             else StartCoroutine(Combust());
         }
-        if(other.gameObject.layer == 10)
-        {
-            StartCoroutine(Combust());
-        }
-        //health.Damage(damage);
     }
 }

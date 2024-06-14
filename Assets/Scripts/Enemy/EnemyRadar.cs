@@ -4,15 +4,7 @@ using UnityEngine;
 
 public class EnemyRadar : MonoBehaviour
 {
-    public GameObject player;
-    public bool isActive;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    public GameObject player; public bool isActive;
     void Update()
     {
         if (isActive)
@@ -20,7 +12,6 @@ public class EnemyRadar : MonoBehaviour
             transform.LookAt(player.transform);
         }
     }
-
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.CompareTag("Player"))
@@ -29,7 +20,6 @@ public class EnemyRadar : MonoBehaviour
             isActive = true;
         }
     }
-
     private void OnTriggerExit(Collider other)
     {
         if(other.gameObject.CompareTag("Player"))

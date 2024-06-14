@@ -39,4 +39,20 @@ public class WallScript : MonoBehaviour
         }
         surface.material = new Material(wallMat[matnum]); 
     }
+    public void Damage(int damage)
+    {
+        //Debug.Log("DAMAGE" + damage);
+        wallStrength -= damage;
+        if(wallStrength <= 0)
+        { //Debug.Log("DETH!");
+            if (gameObject.TryGetComponent(out Death death))
+            {
+                death.HandleDeath();
+            }
+            else
+            {
+                Debug.Log("No death script present, dumbass!");
+            }
+        }
+    } 
 }

@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class PlayerDeath : Death
 {
+    public AudioClip deathSound;
+    public AudioSource deathSource;
     public Vector3 spawnLocation;
     public Quaternion spawnRotation;
     public GameCore gameCore;
+    public GameObject player;
     void Start()
     {
         spawnLocation = transform.position;
@@ -15,11 +18,13 @@ public class PlayerDeath : Death
         gameCore = GameObject.FindObjectOfType<GameCore>();
     }
 
-    public override void HandleDeath()
+    IEnumerator Ascension()
     {
+        Debug.Log("Respawning..." + Time.time);
+        yield return new WaitForSeconds(0);
+        Debug.Log("Subtracting one life..." + Time.time);
         gameCore.DecreasePlayerLives();
-
-        Debug.Log("DEAD");
+        deathSource.PlayOneShot(deathSound);
         GetComponent<Rigidbody>().position = spawnLocation;
         GetComponent<Rigidbody>().rotation = spawnRotation;
 
@@ -27,5 +32,11 @@ public class PlayerDeath : Death
         {
             health.RecoverFull();
         }
+    }
+
+    public override void HandleDeath()
+    {
+        Debug.Log("You died.");
+        StartCoroutine(Ascension());
     }
 }

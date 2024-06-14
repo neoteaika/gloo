@@ -4,10 +4,12 @@ using UnityEngine;
 using UnityEngine.PlayerLoop;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class GameCore : MonoBehaviour
 {
     //Manager script for game state shiz.
-    public int pLives = 3, pScore = 0, pDisks = 0, pSecrets = 0, pCards = 0, pBombs = 0; //  Does the player have skill issues?
+    public string sceneChange = "Died";    //  i  hate this
+    public int pLives = 4, pScore = 0, pDisks = 0, pSecrets = 0, pCards = 0, pBombs = 0; //  Does the player have skill issues?
     public float totalLevelSeconds = 20f, currentLevelSeconds;
     public TextMeshProUGUI TextScore, TextTimer;
     public int playerProgression = 0;  //  What is the FURTHEST level the player has reached? (Maybe unlock levels in the menu)
@@ -15,9 +17,9 @@ public class GameCore : MonoBehaviour
     public void DecreasePlayerLives()
     {
         pLives--;
-        if(pLives <= 0)
+        if(pLives <= 1)
         {
-            Debug.Log("SEGA RALLY GAME OVEER YEAAHA!");
+            SceneManager.LoadScene(sceneChange);
         }
     }
     void Start()

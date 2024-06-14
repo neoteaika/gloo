@@ -8,13 +8,20 @@ public class Health : MonoBehaviour
 
     public void Damage(int damage)
     {
-        Debug.Log("DAMAGE" + damage);
+        //Debug.Log("DAMAGE" + damage);
         health -= damage;
         if(health <= 0)
-        {
-            Debug.Log("DETH!");
+        { //Debug.Log("DETH!");
+            if (gameObject.TryGetComponent(out Death death))
+            {
+                death.HandleDeath();
+            }
+            else
+            {
+                Debug.Log("No death script present, dumbass!");
+            }
         }
-    }
+    } 
 
     public void RecoverFull()
     {
