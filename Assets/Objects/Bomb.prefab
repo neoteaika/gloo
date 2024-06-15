@@ -61,9 +61,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25a031cac6f8b842b0852da7ffda9e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioCore: {fileID: 0}
+  volSFX: 1
   fxExplosion: {fileID: 4469268502998592735, guid: 8ea49559fec350447a40a82f3f024015, type: 3}
   rbody: {fileID: 0}
-  audioCore: {fileID: 0}
   speed: 12
   lifespan: 10
   damage: 1
@@ -96,7 +97,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -44795818266570618, guid: fe9b2e98301dc074b9f07ba6c7b1684f, type: 2}
-  m_audioClip: {fileID: 8300000, guid: e98474839e1101144a729381338f0bb0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 176ef81cbf04c1e4b943e3164d0ad90f, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -142,7 +143,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.254
       inSlope: 0
       outSlope: 0
       tangentMode: 0

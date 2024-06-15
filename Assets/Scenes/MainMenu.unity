@@ -1978,7 +1978,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &156317677
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2699,8 +2699,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.21, y: 1}
-  m_AnchoredPosition: {x: 0.00079345703, y: -3.0474014}
-  m_SizeDelta: {x: 329.2403, y: 214.0946}
+  m_AnchoredPosition: {x: 153.6304, y: -63.270203}
+  m_SizeDelta: {x: 280.0789, y: 93.649}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &219239821
 MonoBehaviour:
@@ -2810,7 +2810,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 11.78949, y: 0, z: 9.824554, w: 27.50879}
+  m_margin: {x: -9.772278, y: 0, z: 23.377655, w: 27.50879}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -6254,7 +6254,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!82 &640878859
 AudioSource:
   m_ObjectHideFlags: 0
@@ -14561,7 +14561,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac2284019e4d6f149a962c19ecbd785f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicMenu: {fileID: 8300000, guid: ff17653d7faabce4d8ab97ee40c1e438, type: 3}
   MenuMain: {fileID: 156317676}
   MenuPlay: {fileID: 405349044}
   MenuExit: {fileID: 1118268144}

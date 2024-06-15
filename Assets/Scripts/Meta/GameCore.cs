@@ -39,6 +39,12 @@ public class GameCore : MonoBehaviour
         {
             //Debug.Log("Time out!");
         }
+        if (Input.GetKey("escape"))
+        {
+            SceneManager.LoadScene(sceneChange);
+        }
         //TextScore.text = playerScore.ToString();
     }
+
+
 }
